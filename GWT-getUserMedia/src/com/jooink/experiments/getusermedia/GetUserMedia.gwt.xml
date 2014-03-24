@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='getusermedia'>
+
+	<source path='client' />
+
+	<replace-with
+		class="com.jooink.experiments.getusermedia.client.UserMediaHolderChrome">
+		<when-type-is class="com.jooink.experiments.getusermedia.client.UserMediaHolderImpl" />
+		<any>
+			<when-property-is name="user.agent" value="safari" />
+			<when-property-is name="user.agent" value="gecko1_8" />
+		</any>
+	</replace-with>
+
+
+</module>
